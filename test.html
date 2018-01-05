@@ -61,13 +61,17 @@
 
             <p class="incentives-subtitle">
             {{#if OemRequiredText }}
-            <span class="OemText"> {{OemRequiredText}} - </span> {{/if}}
+            <span class="OemText"> {{OemRequiredText}}  </span> {{/if}}
+              <span class="first-hypen"> - </span>
 
-               {{#if OemRequiresModelCode}}
-                  {{#if OemModelCode }}
-              <span class="OemModel"> Model {{OemModelCode}} - </span>
+                 {{#if OemRequiresModelCode}}
+                    {{#if OemModelCode }}
+                <span class="OemModel"> Model {{OemModelCode}} </span>
+                    {{/if}}
                   {{/if}}
-                {{/if}}
+
+                <span class="second-hypen"> - </span>
+
                {{#if LowestPriceVin }} <span class="Vin"> Vin# {{LowestPriceVin}} </span> {{/if}}
              </p>
 
@@ -84,7 +88,6 @@
 
       <a class="left-arrow" href="#"> &#60; </a>
       <a class="right-arrow" href="#"> &#62; </a>
-
 
       <a  class="inventory-link" href="{{DestinationUrl}}"> <button class="inventory-btn" type="button" name="button"> VIEW INVENTORY </button> </a>
 

@@ -14,6 +14,14 @@ Handlebars.registerHelper('ifIncentiveTitle', function(v1, v2,v3, v4, options) {
   return options.inverse(this);
 });
 
+Handlebars.registerHelper('ifArrows', function(v1, options) {
+  if(v1.length > 0 ) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
+
 // Handlebars.registerHelper('ifIncentiveSub-first', function(v1, v2,v3, options) {
 //   if(v1 !="" && v2 !="" && v3 != "") {
 //     return options.fn(this);
@@ -102,7 +110,20 @@ $(document).ready(function(){
          }
       });
 
-
-
+    // $('.incentives-subtitle').each(function(){
+    //   if ($(".OemText")[0] && $(".OemModel")[0] && $(".Vin")[0]){
+    //     $('.first-hypen').show();
+    //     $('.second-hypen').show();
+    //   }
+    //   else if (($(".OemText")[0]) && ($(".OemModel")[0])){
+    //     $('.first-hypen').show();
+    //   }
+    //   else if (($(".OemModel")[0]) && ($(".Vin")[0])){
+    //     $('.second-hypen').show();
+    //   }
+    //   else if (($(".OemText")[0]) && ($(".Vin")[0])){
+    //     $('.first-hypen').show();
+    //   }
+    // })
 
 });

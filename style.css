@@ -40,12 +40,12 @@ a {
 
 .title-container img:first-child {
   height: 45px;
-  /* width: 35px; */
+  width: 20%;
 }
 
 .title-container img:nth-child(2) {
   height: 25px;
-  /* width: 40px; */
+  width: 15%;
 }
 
 
@@ -58,12 +58,13 @@ a {
 .OemSeasonal-dealerName {
   padding-left:  10px;
   font-size: 19px;
+  width: 65%;
 }
 
 .dealerName {
   font-size: 21px;
   text-align: center;
-  width: 70%;
+  width: 80%;
 }
 
 
@@ -91,6 +92,10 @@ a {
 .incentives-subtitle {
   font-size: 10px;
   margin-top: 0;
+}
+
+.first-hypen, .second-hypen {
+  display: none;
 }
 
 /* .incentives-subtitle ul {
