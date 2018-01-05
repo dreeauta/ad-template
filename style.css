@@ -1,0 +1,164 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+a {
+  text-decoration: none;
+}
+
+
+.ad-wrapper {
+  width: 350px;
+  height: 250px;
+  border:2px solid black;
+  background-color: #E5E5E5;
+  position: relative;
+  margin: 100px;
+}
+
+.ad-container {
+  margin: 5px 10px 15px 10px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  height: 225px;
+  overflow: hidden;
+  box-shadow: 2px 5px 8px rgba(0,0,0,0.3);
+
+}
+
+
+.title-container {
+  display: flex;
+  margin: 5px 15px 0 15px;
+  height: 55px;
+  border-bottom: 2px solid rgb(204, 204, 204);
+  align-items: center;
+
+}
+
+.title-container img:first-child {
+  height: 45px;
+}
+
+.title-container img:nth-child(2) {
+  height: 25px;
+}
+
+
+.title-container p {
+  display: inline-block;
+}
+
+
+.OemSeasonal-dealerName {
+  padding-left:  10px;
+  font-size: 19px;
+}
+
+.dealerName {
+  font-size: 21px;
+  text-align: center;
+  width: 70%;
+}
+
+
+.car-model {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.incentives-container {
+  text-align: center;
+  background-color: red;
+  margin: 0;
+  height: 40px;
+  color: white;
+}
+
+.incentives-title {
+  font-size: 14px;
+  padding-top: 8px;
+  margin: 0;
+  /* margin-bottom: 7px; */
+}
+
+.incentives-subtitle {
+  font-size: 8px;
+  margin-top: 0;
+}
+
+
+
+.car-image {
+  height: 85px;
+  display: block;
+  margin: 0 auto;
+}
+
+.inventory-btn {
+  font-size: 8px;
+  padding: 8px 7px;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 4px;
+  left: 130px;
+  font-weight: bold;
+}
+
+.left-arrow {
+  position: absolute;
+  left: 5px;
+  bottom: 60px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 5px;
+  bottom: 60px;
+}
+
+.left-arrow, .right-arrow {
+  width: 18px;
+  height: 18px;
+  border-radius: 25px;
+  background-color: red;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.disclaimer-title {
+  font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  border: none;
+  background-color: rgba(0,0,0,0);
+}
+
+
+.disclaimer-text {
+  display: none;
+  position: absolute;
+  top: 0;
+  overflow: scroll;
+  height: 210px;
+  background-color: black;
+  color: red;
+  padding: 20px;
+
+}
+
+.disclaimer-exit {
+  background-color: black;
+  color: white;
+
+}

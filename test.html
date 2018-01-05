@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+      <title> PureCars Projects</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+
+        <div class="ad">
+        </div>
+
+
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+      <script id="ad-template" type="text/x-handlebars-template">
+        {{#each vehicleInfo}}
+
+
+        <div class="ad-wrapper">
+        <div class="ad-container">
+
+
+          <div class="title-container">
+            <img  src="{{OemLogoUrl}}" >
+            {{#if OemSeasonalLogoUrl}}
+            <img  src="{{OemSeasonalLogoUrl}}">
+            <p class="OemSeasonal-dealerName"> {{DealerName }} </p>
+            {{else}}
+
+            <p class="dealerName"> {{DealerName }} </p>
+
+            {{/if}}
+
+          </div>
+
+          <div class="car-model-container">
+            <p class="car-model"> {{Year}} {{Make}} {{Model}} <p>
+
+          </div>
+
+          <div class="incentives-container">
+            {{#if LeaseMonthlyPayment}}
+            <p class="incentives-title"> Lease for ${{LeaseMonthlyPayment}} for {{LeaseMonths}} months</p>
+
+            {{else if PurchaseApr}}
+            <p class="incentives-title"> Drive for {{PurchaseApr}}% for {{PurchaseMonths}} Months </p>
+
+            {{else}}
+            <p class="incentives-title"> Starting At {{LowestPrice}} </p>
+
+            {{/if}}
+
+            <p class="incentives-subtitle"> {{#if OemRequiredText }} <span> {{OemRequiredText}} </span> {{/if}}
+                 {{#if OemRequiresModelCode}}
+                    {{#if OemModelCode }}
+                      <span> Model {{OemModelCode}} </span>
+                    {{/if}}
+                  {{/if}}
+                 {{#if LowestPriceVin }} <span> Vin# {{LowestPriceVin}} </span> {{/if}}
+               </p>
+           </div>
+
+           <div class="car-image-container">
+
+             <img class="car-image" src="{{PhotoUrl}}" alt="">
+
+           </div>
+      </div>
+
+      <a class="left-arrow" href="#"> &#60; </a>
+      <a class="right-arrow" href="#"> &#62; </a>
+
+
+      <a  class="inventory-link" href="{{DestinationUrl}}"> <button class="inventory-btn" type="button" name="button"> VIEW INVENTORY </button> </a>
+
+
+      <div class="disclaimer-wrapper">
+        {{#if PurchaseDisclosure}}
+          <button class="disclaimer-title">
+            Disclaimer* </button>
+
+
+          <div class="disclaimer-text">
+            <button class="disclaimer-exit"> X </button>
+            <br>
+            {{PurchaseDisclosure}}
+          </div>
+
+        {{else if LeaseDisclosure}}
+          <button class="disclaimer-title">
+          Disclaimer* </button>
+          <div class="disclaimer-text">
+          <button class="disclaimer-exit"> X </button>
+          <br>
+          {{LeaseDisclosure}}
+        </div>
+
+        {{/if}}
+
+      </div>
+
+
+     </div>
+
+        {{/each}}
+
+
+      </script>
+
+      <script src="handlebars-v4.0.11.js"> </script>
+      <script src="test-data.js"></script>
+      <script src="script.js"></script>
+
+
+    </body>
+</html>
