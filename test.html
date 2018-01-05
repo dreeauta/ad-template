@@ -44,6 +44,7 @@
           </div>
 
           <div class="incentives-container">
+
             {{#ifCond LeaseMonthlyPayment LeaseMonths}}
             <p class="incentives-title"> Lease for ${{LeaseMonthlyPayment}} for {{LeaseMonths}} months</p>
 
@@ -57,15 +58,22 @@
             <p class="incentives-title"> Starting At {{LowestPrice}} </p>
             {{/ifIncentiveTitle}}
 
-            <p class="incentives-subtitle"> {{#if OemRequiredText }} <span> {{OemRequiredText}} - </span> {{/if}}
-                 {{#if OemRequiresModelCode}}
-                    {{#if OemModelCode }}
-                      <span> Model {{OemModelCode}} - </span>
-                    {{/if}}
+
+            <p class="incentives-subtitle">
+            {{#if OemRequiredText }}
+            <span class="OemText"> {{OemRequiredText}} - </span> {{/if}}
+
+               {{#if OemRequiresModelCode}}
+                  {{#if OemModelCode }}
+              <span class="OemModel"> Model {{OemModelCode}} - </span>
                   {{/if}}
-                 {{#if LowestPriceVin }} <span> Vin# {{LowestPriceVin}} </span> {{/if}}
-               </p>
+                {{/if}}
+               {{#if LowestPriceVin }} <span class="Vin"> Vin# {{LowestPriceVin}} </span> {{/if}}
+             </p>
+
            </div>
+
+
 
            <div class="car-image-container">
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -39,15 +40,18 @@ a {
 
 .title-container img:first-child {
   height: 45px;
+  /* width: 35px; */
 }
 
 .title-container img:nth-child(2) {
   height: 25px;
+  /* width: 40px; */
 }
 
 
 .title-container p {
   display: inline-block;
+  text-align: center;
 }
 
 
@@ -89,6 +93,22 @@ a {
   margin-top: 0;
 }
 
+/* .incentives-subtitle ul {
+  display: inline;
+}
+
+.incentives-subtitle li {
+  display: inline;
+  list-style-type: none;
+}
+
+.incentives-subtitle li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -10px;
+
+} */
+
 
 
 .car-image {
@@ -107,6 +127,11 @@ a {
   bottom: 4px;
   left: 130px;
   font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+
+.inventory-btn:hover {
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 .left-arrow {
@@ -129,6 +154,12 @@ a {
   font-size: 13px;
   text-align: center;
   color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+
 }
 
 
@@ -141,6 +172,9 @@ a {
   right: 5px;
   border: none;
   background-color: rgba(0,0,0,0);
+  cursor:pointer;
+  outline:none;
+
 }
 
 
@@ -149,15 +183,19 @@ a {
   position: absolute;
   top: 0;
   overflow: scroll;
-  height: 210px;
-  background-color: black;
-  color: red;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.8);
+  color: white;
   padding: 20px;
-
+  font-size: .8em;
+  line-height: 1.4em;
 }
 
 .disclaimer-exit {
   background-color: black;
   color: white;
+  margin-bottom: 5px;
+  cursor:pointer;
 
 }
