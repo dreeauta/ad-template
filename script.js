@@ -1,33 +1,48 @@
-Handlebars.registerHelper('ifCond', function (v1, operator, v2, opts) {
-  var isTrue = false;
-  switch (operator) {
-      case '===':
-          isTrue = v1 === v2;
-          break;
-      case '!==':
-          isTrue = v1 !== v2;
-          break;
-      case '<':
-          isTrue = v1 < v2;
-          break;
-      case '<=':
-          isTrue = v1 <= v2;
-          break;
-      case '>':
-          isTrue = v1 > v2;
-          break;
-      case '>=':
-          isTrue = v1 >= v2;
-          break;
-      case '||':
-          isTrue = v1 || v2;
-          break;
-      case '&&':
-          isTrue = v1 && v2;
-          break;
+// Handlebars.registerHelper('ifCond', function (v1, operator, v2, opts) {
+//   var isTrue = false;
+//   switch (operator) {
+//       case '===':
+//           isTrue = v1 === v2;
+//           break;
+//       case '!==':
+//           isTrue = v1 !== v2;
+//           break;
+//       case '<':
+//           isTrue = v1 < v2;
+//           break;
+//       case '<=':
+//           isTrue = v1 <= v2;
+//           break;
+//       case '>':
+//           isTrue = v1 > v2;
+//           break;
+//       case '>=':
+//           isTrue = v1 >= v2;
+//           break;
+//       case '||':
+//           isTrue = v1 || v2;
+//           break;
+//       case '&&':
+//           isTrue = v1 && v2;
+//           break;
+//   }
+//   return isTrue ? opts.fn(this) : opts.inverse(this);
+// });
+
+Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+  if(v1 && v2) {
+    return options.fn(this);
   }
-  return isTrue ? opts.fn(this) : opts.inverse(this);
+  return options.inverse(this);
 });
+
+Handlebars.registerHelper('ifIncentiveTitle', function(v1, v2,v3, v4, options) {
+  if((v1 =="" || v2=="") && (v3 =="" || v4=="") ) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
 
 
 // Handlebars.registerHelper('changeFont', function(options){

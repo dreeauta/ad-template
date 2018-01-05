@@ -26,7 +26,7 @@ var adData = {
     "OemRequiresVin": "True",
     "OemRequiresModelCode": "True",
     "DestinationUrl": "http://www.hunternissan.com/new-inventory/index.htm?search=2017+Nissan+Maxima",
-    "OemModelCode": "",
+    "OemModelCode": "23423",
     "LowestPrice": "$36,726",
     "LowestPriceVin": "1N4AA6AP4HC383652",
     "PurchaseApr": "",
